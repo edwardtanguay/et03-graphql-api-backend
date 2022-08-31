@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 app.get('/employees', async (req, res) => {
 	const employees = ((await axios.get(employeesUrl)).data);
-	res.send(employees);
+	res.send(employees.filter((m:any) => m.employeeID <= 5));
 });
 
 // GRAPHQL AREA
@@ -39,7 +39,7 @@ const root = {
 	},
 	employees: async () => {
 		const employees = ((await axios.get(employeesUrl)).data);
-		return employees;
+		return employees.filter((m:any) => m.employeeID > 5);
 	}
 };
 
