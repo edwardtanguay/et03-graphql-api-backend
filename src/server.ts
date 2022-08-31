@@ -37,14 +37,9 @@ const root = {
 			"Executive"
 		]
 	},
-	employees: () => {
-		return [
-			{
-				firstName: 'fff',
-				lastName: 'lll',
-				territoryIDs: [234,523,523]
-			}
-		]
+	employees: async () => {
+		const employees = ((await axios.get(employeesUrl)).data);
+		return employees;
 	}
 };
 
