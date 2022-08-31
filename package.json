@@ -1,0 +1,20 @@
+{
+  "name": "et03-graphql-api-backend",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.2"
+  }
+}
