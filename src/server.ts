@@ -27,7 +27,24 @@ app.get('/employees', async (req, res) => {
 
 const root = {
 	message: () => {
-		return 'this is the message';
+		return 'This is a test message.';
+	},
+	departments: () => {
+		return [
+			"Sales",
+			"Marketing",
+			"Development",
+			"Executive"
+		]
+	},
+	employees: () => {
+		return [
+			{
+				firstName: 'fff',
+				lastName: 'lll',
+				territoryIDs: [234,523,523]
+			}
+		]
 	}
 };
 
